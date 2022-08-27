@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">books4all</string>
+    <string name="Home">Libri</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+    <string name="book_title">titolo del libro</string>
+    <string name="book_image">immagine del libro</string>
+    <string name="add_new_book">aggiungi nuovo libro</string>
+    <string name="gps">gps</string>
+    <string name="book_summary">riassunto del libro</string>
+    <string name="take_picture">cattura</string>
+    <string name="image_taken">image_taken</string>
+    <string name="share">share</string>
+    <string name="page_number">numero di pagine</string>
+</resources>
