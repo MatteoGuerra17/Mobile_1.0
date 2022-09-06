@@ -21,14 +21,16 @@
 
             <Button
                 android:id="@+id/buttonApplica"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="casual"
+                android:textSize="20sp"
                 android:text="Applica"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/chipGroupType" />
+                app:layout_constraintTop_toBottomOf="@+id/chipLingua" />
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/chipGroupPages"
@@ -46,15 +48,23 @@
                     android:layout_width="150dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="16dp"
-                    android:text="meno di 100" />
+                    android:text="Meno di 100" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipMore100"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:layout_width="160dp"
+                    android:layout_width="150dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="16dp"
-                    android:text="uguale a 100 o di più" />
+                    android:text="100 o di più" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/all"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Tutti" />
             </com.google.android.material.chip.ChipGroup>
 
             <com.google.android.material.chip.ChipGroup
@@ -92,6 +102,41 @@
                     android:text="Fantasy" />
             </com.google.android.material.chip.ChipGroup>
 
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipLingua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewLingua"
+                app:singleLine="false">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipIta"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Italiano" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipUK"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Inglese (UK)" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipUSA"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Inglese (USA)" />
+            </com.google.android.material.chip.ChipGroup>
+
             <TextView
                 android:id="@+id/textViewPages"
                 android:layout_width="170dp"
@@ -113,6 +158,17 @@
                 android:text="Genere"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/chipGroupPages" />
+
+            <TextView
+                android:id="@+id/textViewLingua"
+                android:layout_width="170dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="casual"
+                android:text="Lingua"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chipGroupType" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

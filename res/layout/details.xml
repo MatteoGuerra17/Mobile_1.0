@@ -47,6 +47,37 @@
                 android:fontFamily="casual"
                 android:text="@string/book_summary"
                 android:textAppearance="@style/TextAppearance.Material3.LabelMedium" />
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/type"
+                android:fontFamily="casual"
+                android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+                />
+
+            <TextView
+                android:id="@+id/lang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/lang"
+                android:fontFamily="casual"
+                android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+                />
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#d90000"
+                android:text="DELETE"
+                android:layout_gravity="center"
+                android:drawableTop="@drawable/ic_baseline_delete_24"
+                />
+
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 </androidx.appcompat.widget.LinearLayoutCompat>

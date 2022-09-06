@@ -3,4 +3,5 @@
     <item name="book_edittext" type="id" />
     <item name="page_edittext" type="id" />
     <item name="summary_edittext" type="id" />
+    <item name="type_textView" type="id"/>
 </resources>

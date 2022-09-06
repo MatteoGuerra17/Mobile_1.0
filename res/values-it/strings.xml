@@ -13,4 +13,6 @@
     <string name="image_taken">immagine scattata</string>
     <string name="share">condividi</string>
     <string name="page_number">numero di pagine</string>
+    <string name="type">genere del libro</string>
+    <string name="lang">Lingua</string>
 </resources>

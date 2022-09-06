@@ -12,4 +12,19 @@
     <string name="image_taken">image_taken</string>
     <string name="share">share</string>
     <string name="page_number">numero di pagine</string>
+    <string name="type">genere del libro</string>
+    <string name="lang">Lingua</string>
+
+    <string-array name="genere">
+        <item>Giallo</item>
+        <item>Natura</item>
+        <item>Fantasy</item>
+    </string-array>
+
+    <string-array name="lingua">
+        <item>Italiano</item>
+        <item>Inglese (UK)</item>
+        <item>Inglese (USA)</item>
+    </string-array>
+
 </resources>
