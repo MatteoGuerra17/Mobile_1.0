@@ -21,24 +21,31 @@ import java.util.ArrayList;
 public class AddViewModel extends AndroidViewModel {
 
     //ArrayList<CardItem> allBook = new ArrayList<>();
-    //private final Application application;
+    private final Application application;
 
     private final MutableLiveData<Bitmap> imageBitmap = new MutableLiveData<>();
     private CardItemRepository repository;
 
     public AddViewModel(@NonNull Application application) {
         super(application);
-        repository = new CardItemRepository(application);
+        //repository = new CardItemRepository(application);
 
-        //this.application = application;
-        //initializeBitmap();
+        this.application = application;
+        initializeBitmap();
+    }
+
+    private void initializeBitmap() {
+        Drawable drawable = ResourcesCompat.getDrawable(application.getResources(), R.drawable.ic_launcher_foreground,application.getTheme());
+        Bitmap bitmap = drawableToBitmap(drawable);
+
+        imageBitmap.setValue(bitmap);
     }
 
     public void setImageBitmap (Bitmap bitmap){
         imageBitmap.setValue(bitmap);
     }
 
-    public LiveData<Bitmap> getImageBitmap(){
+    public MutableLiveData<Bitmap> getImageBitmap(){
         return imageBitmap;
     }
 

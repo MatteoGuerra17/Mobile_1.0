@@ -65,8 +65,9 @@ public class AddFragment extends Fragment {
                 }
             });
 
-            AddViewModel addViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(AddViewModel.class);
             ImageView imageView = view.findViewById(R.id.book_image);
+            AddViewModel addViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(AddViewModel.class);
+
             addViewModel.getImageBitmap().observe(getViewLifecycleOwner(), new Observer<Bitmap>() {
                 @Override
                 public void onChanged(Bitmap bitmap) {

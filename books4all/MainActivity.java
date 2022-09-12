@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         if(savedInstanceState == null) {
             Utilities.insertFragment(this, new HomeFragment(), HomeFragment.class.getSimpleName());
 
-            //addViewModel = new ViewModelProvider(this).get(AddViewModel.class);
+            addViewModel = new ViewModelProvider(this).get(AddViewModel.class);
         }
         //addViewModel = new ViewModelProvider(this).get(AddViewModel.class);
         //setRecyclerView(this);

@@ -51,7 +51,7 @@ public class ListViewModel extends AndroidViewModel {
          */
         //return cardItems;
         //setValue();
-        return cardItems;
+        return this.cardItems;
     }
 
     public MutableLiveData<List<CardItem>> getCardItemsLess100() {
@@ -219,13 +219,20 @@ public class ListViewModel extends AndroidViewModel {
     }
 
     public void addCardItem(CardItem item){
+        /*
         ArrayList<CardItem> list = new ArrayList<>();
         list.add(item);
         if (cardItems.getValue() != null){
             list.addAll(cardItems.getValue());
         }
+
+         */
+        if (cardItems.getValue() != null){
+            //cardItems = new MutableLiveData<>();
+            cardItems.getValue().add(0, item);
+        }
         //cardItems.setValue(list);
-        cardItems.getValue().add(0, item);
+
 
 
         repository.addCardItem(item);
@@ -233,16 +240,19 @@ public class ListViewModel extends AndroidViewModel {
     }
 
     public void removeCardItem(CardItem cardItem){
-        if (cardItems.getValue() == null){
-            cardItems = new MutableLiveData<>();
-        } else {
-            ArrayList<CardItem> list = new ArrayList<>(cardItems.getValue());
-            list.remove(cardItem);
+        if (cardItems.getValue() != null){
+    //        cardItems = new MutableLiveData<>();
+          cardItems.getValue().remove(cardItem);
+        }
+            //    else {
+    //        ArrayList<CardItem> list = new ArrayList<>(cardItems.getValue());
+    //        list.remove(cardItem);
             //cardItems.setValue(list);
+
             repository.removeCardItem(cardItem);
             //repository.getCardItemList().getValue().remove(cardItem);
             //repository.getCardItemList().getValue().addAll(list);
-        }
+    //    }
     }
 /*
     public LiveData<List<CardItem>> getCardItemsLess100() {//--------------------------------------------

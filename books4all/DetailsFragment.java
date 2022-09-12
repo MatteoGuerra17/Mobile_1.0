@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
+import com.example.books4all.RecyclerView.CardAdapter;
 import com.example.books4all.ViewModel.ListViewModel;
 
 public class DetailsFragment extends Fragment {
@@ -85,15 +87,16 @@ public class DetailsFragment extends Fragment {
                 }
             });
             delete = view.findViewById(R.id.btn_delete);
-            /*delete.setOnClickListener(new View.OnClickListener() {
+            delete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     listViewModel.removeCardItem(listViewModel.getItemSelected().getValue());
-                    listViewModel.getCardItems();
+                    //listViewModel.getCardItems();
 
                     ((AppCompatActivity)activity).getSupportFragmentManager().popBackStack();
+
                 }
-            });*/
+            });
         }
     }
 

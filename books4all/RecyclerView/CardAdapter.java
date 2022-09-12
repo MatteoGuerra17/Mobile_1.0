@@ -142,7 +142,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> implements
             diffResult.dispatchUpdatesTo(this);
         } else {
             //this.cardItemList = new ArrayList<>(list);
-            //this.cardItemListNotFiltered = new ArrayList<>(list);
+            this.cardItemListNotFiltered = new ArrayList<>(list);
 
             final CardItemDiffCallback diffCallback = new CardItemDiffCallback(this.cardItemList, list);
             final DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(diffCallback);
